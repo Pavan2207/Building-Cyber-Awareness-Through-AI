@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Online Safety Platform</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>AI Online Safety Platform</h1>
+
+        <div class="tabs">
+            <button class="tab-button active" data-tab="chatbot-section">AI Chatbot</button>
+            <button class="tab-button" data-tab="animation-section">AI Animated Scenario Generator</button>
+        </div>
+
+        <div id="chatbot-section" class="tab-content active">
+            <div class="chat-window" id="chat-window">
+                <div class="message bot-message">Hello! I'm here to help you understand and stay safe online. Ask me anything about online safety, scams, privacy, or cyberbullying.</div>
+            </div>
+            <div class="chat-input-area">
+                <input type="text" id="user-input" placeholder="Type your message...">
+                <button id="send-button">Send</button>
+                <button id="record-button"><img src="microphone-icon.png" alt="Record"></button>
+            </div>
+        </div>
+
+        <div id="animation-section" class="tab-content">
+            <h2>Generate Animated Online Safety Scenarios</h2>
+            <p>Describe a scenario, select a target audience, and I'll generate a short animated video.</p>
+            <textarea id="animation-prompt" placeholder="e.g., A young girl learns how to identify a phishing email."></textarea>
+            <div class="audience-select">
+                <label for="audience">Target Audience:</label>
+                <select id="audience">
+                    <option value="children">Children</option>
+                    <option value="teenagers">Teenagers</option>
+                    <option value="adults">Adults</option>
+                    <option value="elderly">Elderly</option>
+                </select>
+            </div>
+            <button id="generate-animation-button">Generate Animated Video</button>
+            <div id="animation-status" class="status-message"></div>
+            <div id="video-container">
+                <video id="generated-video" controls autoplay loop style="display: none; width: 100%; max-width: 640px; margin-top: 20px;"></video>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
